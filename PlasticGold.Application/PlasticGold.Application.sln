@@ -1,0 +1,62 @@
+﻿
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.31911.260
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Host", "1. Host", "{C71B9D91-9CE3-4D0B-B9F0-0EA2754D889D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Application Layer", "2. Application Layer", "{A2A97CE7-0B26-4EDF-985E-9B4F1F31AAFD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Service Layer", "3. Service Layer", "{19ECB717-0103-46C0-BA2E-AD320E702501}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Infrastructure Layer", "4. Infrastructure Layer", "{3A0D9326-3671-4E4A-B99E-F391D546DFAA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Test Layer", "5. Test Layer", "{797D67B5-3B5E-4392-98CB-15A0E1D4F2BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlasticGold.Application", "PlasticGold.Application\PlasticGold.Application.csproj", "{6A9C2E9B-FB1F-4CFD-860C-84D498C35894}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Models", "1. Models", "{86C87801-CA12-4A05-92B8-23833125054A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Data", "1. Data", "{0E50D0CB-0B2C-4644-8319-0FC35A07F56A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlasticGold.Infra.Data", "PlasticGold.Infra.Data\PlasticGold.Infra.Data.csproj", "{4C551FE0-954C-433E-B544-F2D4965FD586}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlasticGold.Services.Model", "PlasticGold.Services.Model\PlasticGold.Services.Model.csproj", "{8EFBA5D0-FF73-4072-9B70-EE0E7EA6C1A5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Common", "2. Common", "{59D29E3E-DB9E-4EF3-A530-12DB75F319A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A9C2E9B-FB1F-4CFD-860C-84D498C35894}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A9C2E9B-FB1F-4CFD-860C-84D498C35894}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A9C2E9B-FB1F-4CFD-860C-84D498C35894}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A9C2E9B-FB1F-4CFD-860C-84D498C35894}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C551FE0-954C-433E-B544-F2D4965FD586}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C551FE0-954C-433E-B544-F2D4965FD586}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C551FE0-954C-433E-B544-F2D4965FD586}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C551FE0-954C-433E-B544-F2D4965FD586}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EFBA5D0-FF73-4072-9B70-EE0E7EA6C1A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EFBA5D0-FF73-4072-9B70-EE0E7EA6C1A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EFBA5D0-FF73-4072-9B70-EE0E7EA6C1A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EFBA5D0-FF73-4072-9B70-EE0E7EA6C1A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6A9C2E9B-FB1F-4CFD-860C-84D498C35894} = {C71B9D91-9CE3-4D0B-B9F0-0EA2754D889D}
+		{86C87801-CA12-4A05-92B8-23833125054A} = {19ECB717-0103-46C0-BA2E-AD320E702501}
+		{0E50D0CB-0B2C-4644-8319-0FC35A07F56A} = {3A0D9326-3671-4E4A-B99E-F391D546DFAA}
+		{4C551FE0-954C-433E-B544-F2D4965FD586} = {0E50D0CB-0B2C-4644-8319-0FC35A07F56A}
+		{8EFBA5D0-FF73-4072-9B70-EE0E7EA6C1A5} = {86C87801-CA12-4A05-92B8-23833125054A}
+		{59D29E3E-DB9E-4EF3-A530-12DB75F319A0} = {19ECB717-0103-46C0-BA2E-AD320E702501}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7E20E97A-79FA-4157-B790-29006BFAEA89}
+	EndGlobalSection
+EndGlobal
