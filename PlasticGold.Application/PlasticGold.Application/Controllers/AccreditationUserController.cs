@@ -13,7 +13,7 @@ namespace PlasticGold.Application.Controllers
     {
         private readonly IAppManagerUserAcess _appManagerUserAcess;
 
-        public AccreditationUserController(IAppManagerUserAcess appManagerUserAcess) 
+        public AccreditationUserController(IAppManagerUserAcess appManagerUserAcess)
         {
             _appManagerUserAcess = appManagerUserAcess;
         }
@@ -24,28 +24,29 @@ namespace PlasticGold.Application.Controllers
             return Ok("Just check if it is working");
         }
 
-        //[HttpPost]
-        //public async Task<IActionResult> Post([FromBody] UserRequest request)
-        //{
-        //    if (request == null)
-        //        return BadRequest();
-
-        //    //var result = await _appManagerUserAcess.UserServicesAccreditation();
-
-        //    return NotFound("Not functional Yet");
-        //}
-
         [HttpPost]
-        public async Task<ActionResult<UserResponse>> PostUserCheck([FromBody] string email)
+        [Route("/userverification")]
+        public async Task<ActionResult<UserResponse>> PostUserCheck([FromBody] UserEmailRequest email)
         {
             if (email == null)
                 return BadRequest();
 
-            var mapperEmailRequest = new UserEmailRequest() { Email = email };
+            var mapperEmailRequest = email.Email;
 
-            var result = await _appManagerUserAcess.UserServicesVerification(mapperEmailRequest.Email);
+            var result = await _appManagerUserAcess.UserServicesVerification(mapperEmailRequest);
 
             return Ok(result);
+        }
+
+        [HttpPost]
+        [Route("/userregistration")]
+        public async Task<IActionResult> Post([FromBody] UserRequest request)
+        {
+            if (request == null)
+                return BadRequest();
+
+            //var result = await _appManagerUserAcess.UserServicesAccreditation();
+            return NotFound("Not functional Yet");
         }
     }
 }

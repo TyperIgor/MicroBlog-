@@ -28,10 +28,8 @@ namespace PlasticGold.Application.Services
             {
                 var result = _appManagerUserAcess.CheckUserExist(emailRequest);
 
-                if (result != true)
-                {
+                if (result == true)
                     return userResponse.StatusOfUserOperation(UserStatusEnum.SuccessfullResponse);
-                }
 
                 return userResponse.StatusOfUserOperation(UserStatusEnum.NotFoundUser);
             }
