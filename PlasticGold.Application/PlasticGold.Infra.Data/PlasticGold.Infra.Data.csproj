@@ -5,7 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.123" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.0" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PlasticGold.Services.Common\PlasticGold.Services.Common.csproj" />
+    <ProjectReference Include="..\PlasticGold.Services.Model\PlasticGold.Services.Model.csproj" />
   </ItemGroup>
 
 </Project>

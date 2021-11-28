@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PlasticGold.Services.Common\PlasticGold.Services.Common.csproj" />
+    <ProjectReference Include="..\PlasticGold.Infra.Data\PlasticGold.Infra.Data.csproj" />
   </ItemGroup>
 
 </Project>
