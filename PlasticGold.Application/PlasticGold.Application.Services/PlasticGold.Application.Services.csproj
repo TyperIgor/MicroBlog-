@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PlasticGold.Application.Messages\PlasticGold.Application.Messages.csproj" />
+    <ProjectReference Include="..\PlasticGold.Services\PlasticGold.Services.csproj" />
+  </ItemGroup>
+
+</Project>
