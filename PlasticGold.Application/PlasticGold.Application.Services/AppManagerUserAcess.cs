@@ -21,22 +21,25 @@ namespace PlasticGold.Application.Services
             throw new NotImplementedException();
         }
 
-        public async Task<UserResponse> UserServicesVerification(string emailRequest)
+        public Task<UserEmailResponse> UserServicesVerification(string emailRequest)
         {
-            var userResponse = new UserResponse();
+            var userResponse = new UserEmailResponse();
             try
             {
                 var result = _appManagerUserAcess.CheckUserExist(emailRequest);
 
                 if (result == true)
-                    return userResponse.StatusOfUserOperation(UserStatusEnum.SuccessfullResponse);
-
-                return userResponse.StatusOfUserOperation(UserStatusEnum.NotFoundUser);
+                {
+                    userResponse.Token = Guid.NewGuid().ToString();
+                    return Task.FromResult(userResponse.StatusOfUserOperation(UserStatusEnum.SuccessfullResponse));
+                }
+                    
+                return Task.FromResult(userResponse.StatusOfUserOperation(UserStatusEnum.NotFoundUser));
             }
             catch (Exception e)
             {
                 throw e;
-                return userResponse.StatusOfUserOperation(UserStatusEnum.ErrorOcurred);
+                return Task.FromResult(userResponse.StatusOfUserOperation(UserStatusEnum.ErrorOcurred));
             }
         }
     }

@@ -1,12 +1,10 @@
-﻿using System;
-using System.ComponentModel;
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 using PlasticGold.Services.Common.Enum;
 using PlasticGold.Services.Common.Extension;
 
 namespace PlasticGold.Application.Messages
 {
-    public class UserResponse
+    public class UserEmailResponse
     {
         [JsonPropertyName("userExist")]
         public bool UserExist { get; set; }
@@ -17,7 +15,7 @@ namespace PlasticGold.Application.Messages
         [JsonPropertyName("message")]
         public string StatusMessage { get; set; }
 
-        public UserResponse StatusOfUserOperation(UserStatusEnum userStatusEnum)
+        public UserEmailResponse StatusOfUserOperation(UserStatusEnum userStatusEnum)
         {
             StatusMessage = userStatusEnum.GetDescription();
             return this;

@@ -25,8 +25,7 @@ namespace PlasticGold.Application.Controllers
         }
 
         [HttpPost]
-        [Route("/userverification")]
-        public async Task<ActionResult<UserResponse>> PostUserCheck([FromBody] UserEmailRequest email)
+        public async Task<ActionResult<UserEmailResponse>> PostUserCheck([FromBody] UserEmailRequest email)
         {
             if (email == null)
                 return BadRequest();
@@ -39,7 +38,6 @@ namespace PlasticGold.Application.Controllers
         }
 
         [HttpPost]
-        [Route("/userregistration")]
         public async Task<IActionResult> Post([FromBody] UserRequest request)
         {
             if (request == null)

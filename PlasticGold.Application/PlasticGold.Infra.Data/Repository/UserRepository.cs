@@ -16,7 +16,7 @@ namespace PlasticGold.Infra.Data.Repository
             var parametersToQuery = new DynamicParameters();
             parametersToQuery.Add("@email", email);
 
-            var sql = "select * from \"UserData\" where \"Email\" = @email";
+            var sql = UserQuery.UserExistQuery;
 
             var result = _npgsqlConnection.Query(sql, parametersToQuery);
 
@@ -32,12 +32,6 @@ namespace PlasticGold.Infra.Data.Repository
 
             var result = await _npgsqlConnection.ExecuteReaderAsync(sql, parametersToQuery);
 
-            if (result != null)
-            {
-                var token = Guid.NewGuid().ToString();
-                return token;
-            }
-
             return null;
         }
 
@@ -45,7 +39,6 @@ namespace PlasticGold.Infra.Data.Repository
         {
             throw new NotImplementedException();
         }
-        
 
     }
 }

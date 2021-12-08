@@ -6,7 +6,7 @@ namespace PlasticGold.Application.Services.Interfaces
 {
     public interface IAppManagerUserAcess
     {
-        Task<UserResponse> UserServicesVerification(string emailRequest);
+        Task<UserEmailResponse> UserServicesVerification(string emailRequest);
 
         Task<object> UserServicesAccreditation();
 

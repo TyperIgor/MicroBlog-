@@ -1,6 +1,4 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
-using PlasticGold.Services.Interfaces;
+﻿using PlasticGold.Services.Interfaces;
 using PlasticGold.Infra.Data.Repository;
 
 namespace PlasticGold.Services
