@@ -36,15 +36,5 @@ namespace PlasticGold.Application.Controllers
 
             return Ok(result);
         }
-
-        [HttpPost]
-        public async Task<IActionResult> Post([FromBody] UserRequest request)
-        {
-            if (request == null)
-                return BadRequest();
-
-            //var result = await _appManagerUserAcess.UserServicesAccreditation();
-            return NotFound("Not functional Yet");
-        }
     }
 }
