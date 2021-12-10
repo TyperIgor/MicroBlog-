@@ -54,4 +54,4 @@ jobs:
           app-name: 'PlasticAppService'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1A00F3C4CB3F4E498D01E80820C39F90 }}
-          package: PlasticGold.Application/PlasticGold.Application.sln
+          package: .
