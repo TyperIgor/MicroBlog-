@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
   
 env:
-  AZURE_WEBAPP_PACKAGE_PATH: PlasticGold.Application/PlasticGold.Application.sln
+  AZURE_WEBAPP_PACKAGE_PATH: /PlasticGold.Application/PlasticGold.Application.sln
 
 jobs:
   build:
