@@ -9,9 +9,6 @@ on:
       - feature/update-initial-project
   workflow_dispatch:
   
-env:
-  AZURE_WEBAPP_PACKAGE_PATH: PlasticGold.Application
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -29,13 +26,13 @@ jobs:
         run: dotnet build --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish -c Release -o ${{env.AZURE_WEBAPP_PACKAGE_PATH}}/myapp
+        run: dotnet publish -c Release -o PlasticGold.Application/PlasticGold.Application.sln
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: .net-app
-          path: ${{env.AZURE_WEBAPP_PACKAGE_PATH}}/myapp
+          path: PlasticGold.Application/PlasticGold.Application.sln
 
   deploy:
     runs-on: ubuntu-latest
@@ -57,4 +54,4 @@ jobs:
           app-name: 'PlasticAppService'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1A00F3C4CB3F4E498D01E80820C39F90 }}
-          package: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp'
+          package: PlasticGold.Application/PlasticGold.Application.sln
