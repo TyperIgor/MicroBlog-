@@ -23,7 +23,7 @@ jobs:
           include-prerelease: true
 
       - name: Build with dotnet
-        run: dotnet build --configuration Release PlasticGold.Application/ .
+        run: dotnet build PlasticGold.Application/PlasticGold.Application.sln
 
       - name: dotnet publish
         run: dotnet publish PlasticGold.Application .
