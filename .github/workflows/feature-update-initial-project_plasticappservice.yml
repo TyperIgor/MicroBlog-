@@ -26,7 +26,7 @@ jobs:
         run: dotnet build --configuration Release PlasticGold.Application/PlasticGold.Application.sln
 
       - name: dotnet publish
-        run: dotnet publish -c Release -o PlasticGold.Application/PlasticGold.Application.sln
+        run: dotnet publish PlasticGold.Application/PlasticGold.Application.sln
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
