@@ -13,5 +13,5 @@ Application developed on latin America hackaton event. This microservice was res
 Front-end Application: https://coopmeet.netlify.app/ 
 
 
-#### Adictional information 
+#### Additional information 
 
